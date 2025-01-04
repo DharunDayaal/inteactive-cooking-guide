@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatbotActivity" >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        android:layout_above="@id/bottomLayout" />
+
+    <TextView
+        android:id="@+id/centerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to BOT\nask anything"
+        android:textAlignment="center"
+        android:textSize="28dp"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottomLayout"
+        android:layout_margin="1dp" >
+
+        <EditText
+            android:id="@+id/promptText"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:padding="16dp"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/sendButton"
+            android:hint="type here"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/oval_shape" />
+
+        <ImageView
+            android:id="@+id/sendButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:padding="1dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/send"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
